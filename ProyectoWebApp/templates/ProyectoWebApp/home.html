@@ -1,0 +1,67 @@
+
+{% extends 'ProyectoWebApp/base.html' %}
+
+{% load static %}
+  
+{% block content %}
+  <title> Inicio </title>
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'ProyectoWebApp/img/page-banner1.png' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Ingresa al mundo laboral</span>
+            <span class="section-heading-lower">Todos somos TECNM!!!</span>
+          </h2>
+          <p class="mb-3">Ahora es tu tiempo, tienes conocimientos, tiempo de experimentar y demostrar al mundo lo que vales.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!--slider-->
+     <h1 id="h1slider">Recomendaciones y tips</h1>
+ <div class="slider">
+    <ul>
+        
+        <li> <a href="http://127.0.0.1:8000/admin/tips/recomendacion/" class="link">
+            <img src="https://scontent.fcvj1-1.fna.fbcdn.net/v/t39.30808-6/312920741_422577923383616_1872820331009414961_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHgBZl35m_Ip5gLBYBVd8-eWRLRiwibHXtZEtGLCJsde01z7tQL8CYjMk890SpqBNQ&_nc_ohc=1Ckg2FDKLrwAX-_JjdE&_nc_ht=scontent.fcvj1-1.fna&oh=00_AfDm2ZZjyL2dPdBoNRYzA0YnDhoB62qxGCZMV2G5ebP9qA&oe=63BF2203">
+        </li>
+        <li> <a href="http://127.0.0.1:8000/admin/tips/recomendacion/" class="link">
+            <img src="https://scontent.fcvj1-1.fna.fbcdn.net/v/t39.30808-6/317682262_448496827458392_8986415935540661236_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFSUerd3gJUpo3gobCM3kX46JLedmUtCIzokt52ZS0IjBr3E18d1OPuZkYDBsel7w8&_nc_ohc=VjfVA5ZSA6kAX-Q1aCI&_nc_ht=scontent.fcvj1-1.fna&oh=00_AfAGqvNVXClypSGIeWIOMr5DTQZ7xA0q8P-jIXf2gSCWSA&oe=63BF87A3">
+        </li>
+        <li> <a href="http://127.0.0.1:8000/admin/tips/recomendacion/" class="link">
+            <img src="https://scontent.fcvj1-1.fna.fbcdn.net/v/t39.30808-6/324091227_1218421162092433_3757775760103819751_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeE1IJg_pg-ifC8w_pc2_32qSqsm5p0CeQRKqybmnQJ5BInQkDkKD3JRYGJNcqSnPD8&_nc_ohc=krUIRKEnp1oAX-t-MYo&_nc_ht=scontent.fcvj1-1.fna&oh=00_AfCGwLoPEyNKNYiH5ODHXp99vsQFqaGsIYOPmQZEwQXNRw&oe=63C08850">
+        </li>
+        <li> <a href="http://127.0.0.1:8000/admin/tips/recomendacion/" class="link">
+            <img src="https://scontent.fcvj1-1.fna.fbcdn.net/v/t39.30808-6/310218357_405543871753688_1673507235336986893_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEu-z4U3RtIIbcoySA80Y4Ucc2WA_uI539xzZYD-4jnf9ufyPgfum7MZkpzdKdT3jk&_nc_ohc=GbnBoycZhM8AX8XhSnx&_nc_ht=scontent.fcvj1-1.fna&oh=00_AfBxmxS7fAF53rtUMJsNqB4ohPHavQnFWwKYfIFNZHKocw&oe=63C0E3EE">
+        </li>
+       
+    </ul>
+</div>
+<!--slider-->
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Compromiso total con nuestros estudiantes</span>
+                <span class="section-heading-lower">Tecnm campus cuautla</span>
+              </h2>
+              <p class="mb-0">El Instituto Tecnológico de Cuautla desde su fundación ha tenido como objetivo primordial, responder eficiente y eficazmente a las perspectivas de desarrollo de la Región Oriente del Estado de Morelos. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+{% endblock %}
+ 
+

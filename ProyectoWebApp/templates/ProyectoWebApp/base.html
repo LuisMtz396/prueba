@@ -1,0 +1,140 @@
+<html>
+
+<head>
+
+    {% load static %}
+    <!-- Bootstrap -->
+    <link href="{% static 'ProyectoWebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/main.css' %}"> 
+     <!-- Fonts -->
+  
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <link href="{% static 'ProyectoWebApp/css/gestion.css' %}" rel="stylesheet">
+ <link href="{% static 'ProyectoWebApp/css/slider.css' %}" rel="stylesheet">
+  
+    
+</head>
+
+<body>
+<div align="right">
+    <a  href="http://127.0.0.1:8000/admin/login/?next=/admin/">
+    <img src="https://imgs.search.brave.com/3KFxP6yasurwNzo4LiBc7HaNC6cn9Xuik9ee_dxRi4U/rs:fit:1000:1000:1/g:ce/aHR0cDovL2Nkbi5v/bmxpbmV3ZWJmb250/cy5jb20vc3ZnL2lt/Z181MTgwOTkuc3Zn.svg"
+     alt="Iniciar Sesión"
+     width="125"
+     height="65">
+    </a>
+    </div>
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      
+        <span class="site-heading-lower">Sitio de egresados TECNM</span>
+      </h1>
+
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Sitio de egresados TECNM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
+          </li>
+          
+          <li class="nav-item {% if request.path == '/vacantes/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'vacantes' %}">Vacantes y bolsa de trabajo</a>
+          </li>
+         
+          <li class="nav-item {% if request.path == '/contacto/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
+          </li>
+          <!-- <li class="nav-item  px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href=" 'http://127.0.0.1:8000' ">Iniciar Sesión</a>
+          </li>
+           -->
+          <!-- 
+          <li class="nav-item {% if request.path == '/blog/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
+          </li>
+         -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--CONTENIDO CAMBIANTE-->
+  {% block content %}
+
+
+  {% endblock %}
+
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="https://www.cuautla.tecnm.mx/" class="link">
+          <img src="https://www.cuautla.tecnm.mx/img/itcuautla.png" weight="10%" height="8%">
+
+	          <!--<span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              -->
+              
+	          </span>
+	        </a>
+       
+	        <a href="https://www.facebook.com/ITCuautlaOficial" class="link">
+          <img src="https://imgs.search.brave.com/zXGGomb1vavdOGD0FuvN1WlujR-LqvdaMDR_J9kLXxo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4u/dGVjaGd5ZC5jb20v/NTAtQmVzdC1GYWNl/Ym9vay1Mb2dvLUlj/b25zLUdJRi1UcmFu/c3BhcmVudC1QTkct/SW1hZ2VzLTI4LnBu/Zw" weight="10%" height="8%">
+            <!--
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          -->
+            </span>
+	        </a>
+	        <a href="https://www.youtube.com/watch?v=1fysHX-IgHo&t=2s" class="link">
+
+        
+         <img src="{% static 'ProyectoWebApp/img/youtubec.png' %}"  weight="10%" height="8%"/>
+          <!--
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+               -->
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="sample.html" class="link">Política de privacidad</a> ·
+        	<a href="sample.html" class="link">Aviso legal</a> ·
+        	<a href="sample.html" class="link">Cookies</a>
+		</p>
+        <p class="m-0 mbt1">&copy; Copyright 2022 TecNM Campus Cuautla - Todos los Derechos Reservados 2022</p>
+      </div>
+      <p class="m-0 mbt1">Número de visitas:</p>
+      <!-- Contador de visitas -->
+<center><a href="https://websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
+<img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=6408"> </center>
+<!-- Fin Contador de visitas -->
+	</footer>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'ProyectoWebApp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'ProyectoWebApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<div id="sfchx4z9ezmnkc5c1gwu5kywz7e7hnb6dz1"></div>
+
+ 
+
+
+
+</body>
+
+
+</html>
